@@ -30,8 +30,9 @@ export const SITE = {
   tagline: "Mitra Reseller 2026",
   description:
     "Rendang Pangroso — rendang sapi premium siap saji, dimasak lambat 8 jam, halal MUI & PIRT resmi. Gabung jadi Mitra Reseller: tanpa MOQ, margin enak, mulai dari 1 pack. Cocok untuk pekerja kantoran & keluarga sibuk di Jabodetabek.",
-  // Set NEXT_PUBLIC_SITE_URL in Vercel to your real domain (used for OG tags, canonical, sitemap).
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rendangpangroso.com",
+  // Canonical domain (www is primary; the bare domain 308-redirects to it).
+  // Override via NEXT_PUBLIC_SITE_URL in Vercel if the domain ever changes.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.rendangpangroso.com",
 };
 
 // Used by JSON-LD structured data (helps Google understand the business & product).
