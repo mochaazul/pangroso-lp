@@ -11,7 +11,13 @@ export const CONTACT = {
   instagramUrl: "https://instagram.com/rendangpangroso",
   linktree: "linktr.ee/rendangpangroso",
   linktreeUrl: "https://linktr.ee/rendangpangroso",
+  // ⚠️ Replace with a real inbox you monitor — used on the Privacy Policy / Data
+  // Deletion pages and is the contact Facebook may verify during app review.
+  email: "halo@rendangpangroso.com",
 };
+
+// "Last updated" date shown on the legal pages (Privacy, Terms, Data Deletion).
+export const LEGAL_UPDATED = "22 Juni 2026";
 
 const WA_MESSAGE = encodeURIComponent(
   "Halo Pangroso, saya tertarik jadi Mitra Reseller. Boleh info lebih lanjut?",

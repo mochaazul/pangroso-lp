@@ -1,7 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import { MessageCircle, Globe, AtSign } from "lucide-react";
 import { CONTACT, NAV_LINKS, WHATSAPP_URL } from "@/lib/site";
 import { Container } from "./ui";
+
+const LEGAL_LINKS = [
+  { href: "/privacy", label: "Kebijakan Privasi" },
+  { href: "/terms", label: "Ketentuan Layanan" },
+  { href: "/data-deletion", label: "Penghapusan Data" },
+];
 
 const SOCIALS = [
   { icon: MessageCircle, href: WHATSAPP_URL, label: "WhatsApp" },
@@ -72,9 +79,18 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 border-t border-line pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Rendang Pangroso. Semua hak dilindungi.</p>
-          <p>Halal MUI · PIRT Resmi · Uji Lab Tersertifikasi</p>
+        <div className="mt-12 flex flex-col gap-4 border-t border-line pt-6 text-xs text-muted">
+          <nav className="flex flex-wrap gap-x-4 gap-y-1">
+            {LEGAL_LINKS.map((l) => (
+              <Link key={l.href} href={l.href} className="transition-colors hover:text-maroon">
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p>© 2026 Rendang Pangroso. Semua hak dilindungi.</p>
+            <p>Halal MUI · PIRT Resmi · Uji Lab Tersertifikasi</p>
+          </div>
         </div>
       </Container>
     </footer>
