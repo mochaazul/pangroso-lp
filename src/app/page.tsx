@@ -12,6 +12,7 @@ import { NoMoq } from "@/components/sections/no-moq";
 import { Income } from "@/components/sections/income";
 import { SocialProof } from "@/components/sections/social-proof";
 import { Whitelabel } from "@/components/sections/whitelabel";
+import { Faq } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/final-cta";
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
         <Legality />
         <SocialProof />
         <Whitelabel />
+        <Faq />
         <FinalCta />
       </main>
       <SiteFooter />

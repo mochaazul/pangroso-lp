@@ -27,6 +27,7 @@ export function Hero() {
           <Reveal delay={80}>
             <h1 className="mt-5 font-serif text-5xl font-bold leading-[1.04] tracking-tight text-ink sm:text-6xl lg:text-7xl">
               Rendang <span className="text-maroon">Pangroso</span>
+              <span className="sr-only"> — Rendang Sapi Premium Siap Saji</span>
             </h1>
           </Reveal>
           <Reveal delay={160}>

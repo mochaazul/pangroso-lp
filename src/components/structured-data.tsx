@@ -1,4 +1,4 @@
-import { BUSINESS, CONTACT, PRICING, RATING, SITE } from "@/lib/site";
+import { BUSINESS, CONTACT, FAQ, PRICING, RATING, SITE } from "@/lib/site";
 
 /** "Rp 46.000" -> 46000 */
 function toNumber(price: string) {
@@ -73,9 +73,19 @@ export function StructuredData() {
       : {}),
   };
 
+  const faqPage = {
+    "@type": "FAQPage",
+    "@id": `${SITE.url}#faq`,
+    mainEntity: FAQ.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   const graph = {
     "@context": "https://schema.org",
-    "@graph": [organization, website, product],
+    "@graph": [organization, website, product, faqPage],
   };
 
   return (

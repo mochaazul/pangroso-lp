@@ -48,6 +48,40 @@ export const NAV_LINKS = [
   { label: "Harga & Komisi", href: "#harga" },
   { label: "Potensi", href: "#potensi" },
   { label: "Legalitas", href: "#legalitas" },
+  { label: "FAQ", href: "#faq" },
+];
+
+// FAQ — feeds both the on-page accordion and the FAQPage JSON-LD (rich results).
+// Keep questions/answers natural & accurate; edit freely.
+export const FAQ = [
+  {
+    q: "Apa itu Rendang Pangroso?",
+    a: "Rendang Pangroso adalah rendang sapi premium siap saji, dimasak lambat 8 jam dengan resep Padang. Tinggal panaskan sekitar 2 menit dan langsung bisa disantap — praktis untuk pekerja kantoran dan keluarga sibuk.",
+  },
+  {
+    q: "Apakah Rendang Pangroso halal dan aman?",
+    a: "Ya. Rendang Pangroso sudah bersertifikat Halal MUI, terdaftar PIRT resmi, dan lulus uji lab — jadi produk teruji, terdaftar, dan halal terjamin.",
+  },
+  {
+    q: "Bagaimana cara menyajikan rendang siap saji ini?",
+    a: "Cukup panaskan sekitar 2 menit. Bisa dikukus, dipanaskan di microwave, atau pakai teflon — setelah itu langsung siap disantap.",
+  },
+  {
+    q: "Bagaimana cara menyimpan kemasannya?",
+    a: "Rendang Pangroso dikemas dalam pouch ziplock food-grade yang re-sealable dan compact, sehingga praktis disimpan. Ikuti petunjuk penyimpanan pada kemasan untuk daya tahan terbaik.",
+  },
+  {
+    q: "Bagaimana cara jadi reseller atau Mitra Pangroso?",
+    a: "Daftar gratis lewat WhatsApp 0821-9777-2864. Tidak ada MOQ, bisa mulai dari 1 pack, dengan komisi 10% per pack — bisa sampai 20% kalau aktif lebih dari 30 pcs/bulan.",
+  },
+  {
+    q: "Apakah ada minimum order (MOQ)?",
+    a: "Tidak ada MOQ. Anda bisa mulai dari 1 pack tanpa modal besar dan tanpa perlu menyimpan stok — order sesuai pesanan customer, kami yang masak fresh.",
+  },
+  {
+    q: "Apakah bisa dijual pakai merek sendiri (whitelabel)?",
+    a: "Bisa. Kami kirim dalam kemasan dalam saja tanpa kemasan luar, jadi Anda bebas mendesain kemasan luar dengan merek sendiri.",
+  },
 ];
 
 export const PRICING = {
