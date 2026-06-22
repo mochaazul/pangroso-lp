@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  Rendang Pangroso — design tokens (derived from the pitch deck)     */
+/* ------------------------------------------------------------------ */
+@theme {
+  /* Surfaces — warm cream */
+  --color-cream: #f4eee3;
+  --color-cream-light: #faf6ee;
+  --color-cream-dark: #ece3d3;
+  --color-paper: #fbf8f1;
+
+  /* Ink / text */
+  --color-ink: #211c17;
+  --color-charcoal: #2a241e;
+  --color-body: #574e42;
+  --color-muted: #8c8275;
+
+  /* Gold accent */
+  --color-gold: #a9854a;
+  --color-gold-soft: #c5a468;
+
+  /* Brand maroon */
+  --color-maroon: #6e2a2a;
+  --color-maroon-dark: #561f1f;
+
+  /* Lines */
+  --color-line: #e3dac9;
+  --color-line-strong: #d4c8b2;
+
+  /* Fonts (wired up in layout.tsx via next/font) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+
+  /* Easing */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  --background: var(--color-cream);
+  --foreground: var(--color-ink);
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Eyebrow label used across sections */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+/* Thin gold rule under eyebrows / titles */
+.rule {
+  width: 2.5rem;
+  height: 2px;
+  background: var(--color-gold);
+  border-radius: 9999px;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s var(--ease-out-soft), transform 0.7s var(--ease-out-soft);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+::selection {
+  background: var(--color-maroon);
+  color: var(--color-paper);
+}
