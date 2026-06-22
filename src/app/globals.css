@@ -14,10 +14,11 @@
   --color-ink: #211c17;
   --color-charcoal: #2a241e;
   --color-body: #574e42;
-  --color-muted: #8c8275;
+  --color-muted: #6f665a; /* darkened to meet WCAG AA (4.6:1) on cream */
 
   /* Gold accent */
-  --color-gold: #a9854a;
+  --color-gold: #a9854a; /* icons, rules, borders (non-text) */
+  --color-gold-ink: #8a6a34; /* gold used as small text — passes WCAG AA on cream */
   --color-gold-soft: #c5a468;
 
   /* Brand maroon */
@@ -64,7 +65,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-gold-ink);
 }
 
 /* Thin gold rule under eyebrows / titles */

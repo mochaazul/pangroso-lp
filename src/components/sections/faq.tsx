@@ -8,7 +8,7 @@ export function Faq() {
     <section id="faq" className="scroll-mt-24 py-20 sm:py-28">
       <Container className="max-w-3xl">
         <Reveal>
-          <Eyebrow align="center" className="mb-7 items-center text-center">
+          <Eyebrow align="center" className="mb-7">
             FAQ
           </Eyebrow>
           <h2 className="text-center font-serif text-4xl font-bold leading-[1.06] tracking-tight text-ink sm:text-5xl">

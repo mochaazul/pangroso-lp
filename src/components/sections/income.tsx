@@ -47,7 +47,7 @@ export function Income() {
                   </span>
                   <p
                     className={`mt-5 text-xs font-bold uppercase tracking-[0.22em] ${
-                      featured ? "text-gold-soft" : "text-gold"
+                      featured ? "text-gold-soft" : "text-gold-ink"
                     }`}
                   >
                     {tier.label}

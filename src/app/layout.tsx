@@ -13,7 +13,10 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  // Only the weights actually used (700 for headings, 400 for italics), plus the
+  // real italic cut so italic serif text isn't browser-synthesized (faux) italic.
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
 });
 
 /**
@@ -88,7 +91,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${inter.variable} ${playfair.variable} antialiased`}>
-      <body>{children}</body>
+      <body>
+        {/* If JS is disabled, the scroll-reveal animations never run — force all
+            revealed content visible so the page is never blank. */}
+        <noscript>
+          <style>{`.reveal{opacity:1 !important;transform:none !important}`}</style>
+        </noscript>
+        {children}
+      </body>
     </html>
   );
 }
