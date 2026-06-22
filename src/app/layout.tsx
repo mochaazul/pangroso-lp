@@ -29,7 +29,7 @@ const FB_DOMAIN_VERIFICATION =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — Mitra Reseller 2026`,
+    default: `${SITE.name} — Rendang Sapi Premium Siap Saji | Mitra Reseller`,
     template: `%s · ${SITE.name}`,
   },
   description: SITE.description,
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     locale: "id_ID",
     url: SITE.url,
     siteName: SITE.name,
-    title: `${SITE.name} — Mitra Reseller 2026`,
+    title: `${SITE.name} — Rendang Sapi Premium Siap Saji`,
     description: SITE.description,
     images: [
       {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} — Mitra Reseller 2026`,
+    title: `${SITE.name} — Rendang Sapi Premium Siap Saji`,
     description: SITE.description,
     images: ["/og.jpg"],
   },

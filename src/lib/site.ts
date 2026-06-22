@@ -23,9 +23,24 @@ export const SITE = {
   name: "Rendang Pangroso",
   tagline: "Mitra Reseller 2026",
   description:
-    "Rendang sapi premium siap saji. Gabung jadi Mitra Reseller Pangroso — tanpa MOQ, margin enak, semua legalitas lengkap.",
+    "Rendang Pangroso — rendang sapi premium siap saji, dimasak lambat 8 jam, halal MUI & PIRT resmi. Gabung jadi Mitra Reseller: tanpa MOQ, margin enak, mulai dari 1 pack. Cocok untuk pekerja kantoran & keluarga sibuk di Jabodetabek.",
   // Set NEXT_PUBLIC_SITE_URL in Vercel to your real domain (used for OG tags, canonical, sitemap).
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rendangpangroso.com",
+};
+
+// Used by JSON-LD structured data (helps Google understand the business & product).
+export const BUSINESS = {
+  productName: "Rendang Pangroso — Rendang Sapi Premium Siap Saji",
+  category: "Makanan Halal / Rendang Sapi Siap Saji",
+  areaServed: "Jabodetabek, Indonesia",
+};
+
+// Aggregate rating for Product structured data (the star snippet in Google results).
+// Set `count` to your REAL Shopee review count to switch it on. Leave it null until
+// you have a genuine number — fake review data can get a site penalized by Google.
+export const RATING: { value: string; count: number | null } = {
+  value: "5.0",
+  count: null,
 };
 
 export const NAV_LINKS = [
